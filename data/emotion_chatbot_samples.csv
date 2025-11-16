@@ -1,0 +1,66 @@
+conversation_id,turn,speaker,text,emotion,label,bot_response,response_strategy,intensity
+C001,1,user,"I just aced my presentation and I'm so proud of myself!",joy,joy,"That's fantastic! Take a moment to celebrate—your effort clearly paid off.","Amplify positive affect",5
+C002,1,user,"My manager praised my report today and it made my whole week.",joy,joy,"Love hearing that recognition came through—hold onto that motivation.",Positive reinforcement,4
+C003,1,user,"The sun is out and everything feels possible right now.",joy,joy,"Sounds like a perfect moment—anything you'd like to channel that energy into?",Future planning,3
+C004,1,user,"I finally finished my thesis draft and I'm relieved.",joy,joy,"Huge milestone—take some rest before the next edits, you've earned it.",Encourage rest,4
+C005,1,user,"My friend surprised me with tickets to my favorite band!",joy,joy,"What an awesome surprise—maybe jot down something special you want to share with them there.",Share excitement,5
+C006,1,user,"I can't stop crying since I lost my job today.",sadness,sadness,"I'm really sorry you're going through that—want to talk about what feels heaviest right now?",Validation,5
+C007,1,user,"Everyone seems busy and I'm feeling invisible lately.",sadness,sadness,"Feeling overlooked can hurt—would it help to plan a small check-in with someone you trust?",Connection planning,4
+C008,1,user,"I moved to a new city and I miss my family so much.",sadness,sadness,"Transitions are tough—maybe setting a video call or sharing photos could ease the ache a bit.",Coping suggestion,4
+C009,1,user,"My project was rejected again and I'm losing hope.",sadness,sadness,"That's discouraging—want to unpack the feedback together to find next steps?",Problem solving,4
+C010,1,user,"It's raining nonstop and the gloom is getting to me.",sadness,sadness,"Gray days can weigh us down—maybe a cozy ritual could brighten the mood?",Mood lifting tip,2
+C011,1,user,"I can't stand how unfairly that customer treated me today.",anger,anger,"It sounds infuriating—do you want to vent more or brainstorm a calm reply?",Choice empowerment,4
+C012,1,user,"My roommate keeps ignoring our chores agreement and I'm furious.",anger,anger,"Totally valid to feel upset—maybe scripting a direct but calm reminder could help?",Conflict planning,4
+C013,1,user,"People keep interrupting me in meetings and it's making me mad.",anger,anger,"Being talked over is frustrating—would rehearsing a firm but polite interjection help?",Skill rehearsal,3
+C014,1,user,"I hate that I'm still stuck in traffic after an hour.",anger,anger,"Gridlock can be rage-inducing—try some slow breaths to keep the stress from snowballing.",Grounding prompt,3
+C015,1,user,"I'm angry at myself for missing another deadline.",anger,anger,"Self-directed anger is heavy—want to explore what blocked you so we can plan differently?",Reflective inquiry,4
+C016,1,user,"The thought of tomorrow's surgery has me shaking.",fear,fear,"Facing surgery can be scary—do you want to go over what to expect to feel more prepared?",Information offering,5
+C017,1,user,"I have to present in front of hundreds and I'm terrified.",fear,fear,"Stage fright is common—shall we walk through a quick confidence ritual together?",Coping strategy,4
+C018,1,user,"The layoffs rumor is making me anxious about my future.",fear,fear,"Uncertainty can be unsettling—maybe listing what you can control right now could ground you.",Control reframe,4
+C019,1,user,"I'm scared that my friend is upset with me but I don't know why.",fear,fear,"Not knowing can spiral—would reaching out with an open check-in feel doable?",Action prompt,3
+C020,1,user,"Every time I get in the car I worry about another accident.",fear,fear,"That lingering fear is understandable—maybe we can plan gradual exposures to rebuild confidence.",Gradual exposure plan,4
+C021,1,user,"My teammate announced a huge change and I'm stunned.",surprise,surprise,"Big news indeed—want to explore how this shift affects your plans?",Sense-making,3
+C022,1,user,"I just learned I'm getting relocated overseas next month!",surprise,surprise,"Wow, that's sudden—shall we map out first steps so it feels less overwhelming?",Planning support,4
+C023,1,user,"Someone just sent me an anonymous thank-you note, and I'm shocked.",surprise,surprise,"How lovely! Maybe you can pass on that kindness to keep the ripple going.",Pay-it-forward,2
+C024,1,user,"I received an invitation to speak at a conference out of nowhere.",surprise,surprise,"That's impressive—want help deciding whether to accept and how to prepare?",Decision support,3
+C025,1,user,"My test results came back negative when I expected the worst.",surprise,surprise,"Relief mixed with surprise is powerful—maybe mark the moment with a self-care treat.",Self-care prompt,3
+C026,1,user,"I feel grossed out after seeing how messy the kitchen is.",disgust,disgust,"Totally fair reaction—perhaps setting a cleanup boundary with others could help.",Boundary setting,3
+C027,1,user,"The news about corruption scandals makes me feel sick.",disgust,disgust,"It's hard to stomach injustice—want to channel that energy into an action you value?",Value alignment,3
+C028,1,user,"My gym socks smell awful and it's unbearable.",disgust,disgust,"Yikes—maybe a deep clean plus a fresh pair could reset the space.",Practical fix,1
+C029,1,user,"That online troll's hateful comments made me feel dirty.",disgust,disgust,"Those comments were unacceptable—blocking and reporting might reclaim your space.",Safety action,4
+C030,1,user,"The cafeteria served something that looked spoiled.",disgust,disgust,"You deserve safe food—did you report it so others stay safe too?",Accountability prompt,2
+C031,1,user,"I just want to hug everyone—I feel so full of love.",love,love,"That's wonderful—maybe share a kind note with someone specific today.",Intentional kindness,4
+C032,1,user,"My partner made me breakfast and I'm overflowing with affection.",love,love,"What a thoughtful gesture—how might you show appreciation back?",Reciprocity,3
+C033,1,user,"Helping at the shelter today filled my heart.",love,love,"Acts of service can be fulfilling—consider journaling about what moved you most.",Reflection,3
+C034,1,user,"Seeing my baby niece smile melts me every time.",love,love,"Such a sweet moment—maybe capture it in a message to her parents.",Memory sharing,2
+C035,1,user,"My community rallied around me and I feel so supported.",love,love,"Being held by community is special—anything you'd like to say to thank them?",Gratitude prompt,4
+C036,1,user,"I'm not sure how to feel—everything seems flat lately.",neutral,neutral,"Feeling neutral is still a feeling—want to explore if anything could bring gentle interest?",Curiosity spark,2
+C037,1,user,"Just another regular day, nothing major happening.",neutral,neutral,"Sometimes routine is restful—anything you'd like to gently tweak today?",Micro-adjustment,2
+C038,1,user,"I'm going through the motions at work without strong emotions.",neutral,neutral,"Maybe check in with your values to see if there's a small spark to pursue.",Values check,2
+C039,1,user,"Can't complain, can't celebrate—just steady.",neutral,neutral,"Steady can be solid—want ideas to add a bit of meaning to the evening?",Meaning prompt,2
+C040,1,user,"Everything feels balanced right now.",neutral,neutral,"Balance is nice—maybe note what habits keep it so you can return to them later.",Habit reflection,1
+C001,2,bot,"Congratulations again! Any highlight from the presentation you want to remember?",joy,joy,"",Follow-up curiosity,3
+C001,3,user,"The Q&A went so smoothly—it boosted my confidence.",joy,joy,"It's great that the Q&A affirmed your expertise—maybe jot down the toughest question for future prep.",Reinforce mastery,3
+C006,2,bot,"That sounds overwhelming. Is there someone you can lean on tonight?",sadness,sadness,"",Support prompt,4
+C006,3,user,"My sister offered to talk, but I don't want to burden her.",sadness,sadness,"Loved ones usually want to help—maybe tell her what kind of support feels best for you.",Empathy coaching,4
+C010,2,bot,"Would adding a cozy playlist or warm drink make the rain feel calmer?",sadness,sadness,"",Gentle suggestion,2
+C010,3,user,"I might light a candle and read to shift the mood.",sadness,sadness,"That sounds soothing—enjoy that pocket of calm.",Encourage self-care,2
+C017,2,bot,"Want to walk through your opening lines together?",fear,fear,"",Skill rehearsal,3
+C017,3,user,"Yes, repeating them out loud helps me relax.",fear,fear,"Great—keep practicing with deep breaths between runs to anchor confidence.",Breathing cue,3
+C021,2,bot,"Do you know how the change affects your responsibilities yet?",surprise,surprise,"",Clarify impact,2
+C021,3,user,"Not yet—they promised details tomorrow.",surprise,surprise,"Maybe list questions tonight so you're ready for the update.",Preparation tip,3
+C029,2,bot,"Blocking them might be a start. Do you need help reporting it?",disgust,disgust,"",Safety check,3
+C029,3,user,"I already reported it, but the comments still hurt.",disgust,disgust,"Processing that sting is valid—maybe affirmations or supportive friends could help reset your space.",Emotional repair,4
+C036,2,bot,"Is there anything small that could spark interest today?",neutral,neutral,"",Motivation prompt,2
+C036,3,user,"Maybe trying a new recipe after work.",neutral,neutral,"Love that idea—want me to keep you accountable later?",Accountability offer,2
+C041,1,user,"I woke up smiling and humming my favorite song.",joy,joy,"Love that energy—want to plan a mini celebration to keep it going?",Celebrate momentum,3
+C042,1,user,"My best friend sent me a care package filled with treats.",joy,joy,"That's so thoughtful—maybe send a thank-you selfie to share the smile.",Gratitude action,4
+C043,1,user,"I just got engaged and I'm over the moon!",joy,joy,"Huge congratulations! Want to talk about how you'll share the news?",Support excitement,5
+C044,1,user,"My thesis advisor said my work was outstanding!",joy,joy,"What a confidence boost—maybe note the feedback so you can revisit it on tough days.",Positive journaling,4
+C045,1,user,"Volunteering today filled me with warmth and purpose.",love,love,"That's beautiful—was there a moment that stood out you'd like to remember?",Meaning reflection,3
+C046,1,user,"My partner surprised me with a weekend getaway and I'm ecstatic!",love,love,"What a lovely gesture—want to brainstorm how to make it extra special?",Planning joy,4
+C047,1,user,"I feel incredibly grateful for my community tonight.",love,love,"Maybe share that gratitude with them—they'd love to hear it.",Express gratitude,3
+C048,1,user,"I can't stop smiling after the good news I received.",joy,joy,"Smiles are contagious—want to capture the moment in a message or photo?",Memory capture,3
+C049,1,user,"My hard work finally paid off with a promotion!",joy,joy,"Amazing! How do you want to celebrate this milestone?",Milestone planning,5
+C050,1,user,"I'm cherishing the love I feel when I hug my dog.",love,love,"That cozy feeling is priceless—maybe schedule extra playtime together.",Nurture bond,2
+

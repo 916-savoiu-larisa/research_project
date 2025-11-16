@@ -1,17 +1,19 @@
 import pandas as pd
 from datasets import Dataset, DatasetDict
-import numpy as np
 
-def default_label_map(label):
-    # example mapping placeholder (user should adapt to dataset labels)
-    return label
 
 def load_local_csv_and_prepare(path, tokenizer, max_length=128, label_map=None):
     df = pd.read_csv(path)
+    print(f"[dataset] Loaded {len(df)} rows from {path}")
     # Expect columns 'text' and 'label'
     if label_map is None:
-        label_map = lambda x: x
-    df['label'] = df['label'].apply(label_map)
+        unique_labels = sorted(df['label'].unique())
+        label_map = {label: idx for idx, label in enumerate(unique_labels)}
+        print(f"[dataset] Generated label map: {label_map}")
+    df['label'] = df['label'].map(label_map)
+    if df['label'].isnull().any():
+        missing = df[df['label'].isnull()]
+        raise ValueError(f'Label mapping missing for values: {missing}')
     # simple split
     n = len(df)
     train = df.sample(frac=0.7, random_state=42)
@@ -27,4 +29,4 @@ def load_local_csv_and_prepare(path, tokenizer, max_length=128, label_map=None):
     })
     ds = ds.map(tokenize_batch, batched=True)
     ds = ds.rename_column('label', 'labels')
-    return ds
+    return ds, label_map

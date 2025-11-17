@@ -24,17 +24,25 @@ def main(args):
     set_seed(42)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     # load and preprocess
-    ds = load_local_csv_and_prepare(args.data, tokenizer, max_length=128, label_map=None)
+    ds, label_map = load_local_csv_and_prepare(args.data, tokenizer, max_length=128, label_map=None)
     if args.fast:
         # take tiny subset for CI speed
         for split in ds:
             ds[split] = ds[split].select(range(min(32, len(ds[split]))))
         args.epochs = 1
 
-    model = AutoModelForSequenceClassification.from_pretrained(MODEL_NAME, num_labels=args.num_labels)
+    num_labels = args.num_labels or len(label_map)
+    id2label = {idx: label for label, idx in label_map.items()}
+    model = AutoModelForSequenceClassification.from_pretrained(
+        MODEL_NAME,
+        num_labels=num_labels,
+        id2label=id2label,
+        label2id=label_map
+    )
     training_args = TrainingArguments(
         output_dir=args.output,
-        evaluation_strategy='epoch',
+        eval_strategy='epoch',
+        save_strategy='epoch',
         per_device_train_batch_size=8,
         per_device_eval_batch_size=16,
         num_train_epochs=args.epochs,
@@ -55,13 +63,14 @@ def main(args):
     )
     trainer.train()
     trainer.save_model(args.output)
+    tokenizer.save_pretrained(args.output)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--data', type=str, default='data/goemotions_subset.csv')
+    parser.add_argument('--data', type=str, default='data/emotion_chatbot_samples.csv')
     parser.add_argument('--output', type=str, default='models/emotion_bert_small')
     parser.add_argument('--epochs', type=int, default=3)
-    parser.add_argument('--num_labels', type=int, default=6)
+    parser.add_argument('--num_labels', type=int, default=None)
     parser.add_argument('--fast', action='store_true')
     args = parser.parse_args()
     main(args)

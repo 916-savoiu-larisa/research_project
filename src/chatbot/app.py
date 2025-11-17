@@ -23,9 +23,10 @@ def chat():
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', type=str, default='models/emotion_bert_small')
+    parser.add_argument('--csv', type=str, default='data/emotion_chatbot_samples.csv')
     args = parser.parse_args()
     global selector
-    selector = ResponseSelector(args.model)
+    selector = ResponseSelector(args.model, csv_path=args.csv)
     app.run(host='0.0.0.0', port=int(os.environ.get('PORT',5000)))
 
 if __name__ == '__main__':
